@@ -1,0 +1,14 @@
+[b][i]Preference Test[/i][/b]
+
+[i]Support library[/i]-k hozzáadása [i]Android Studio[/i] alatt a [i]Project Structure[/i] ablakban történhet. A [i]Dependencies[/i] fülön a [i]Library Dependency[/i] hozzáadása - elvileg - segít a megfelelő support library kiválasztásaban, de a preference support library-k pont hiányoznak.
+Nyissuk meg inkább közvetlenül a [i]build.gradle (Module:app)[/i] file-t, ahol a [i]dependencies[/i] részt kiegészíthetjük a megfelelő library-val. Illesszük be a:
+[code]
+compile 'com.android.support:preference-v7:+'
+compile 'com.android.support:preference-v14:+'
+[/code]
+sorokat! A '+' jel természetesen nem elfogadható verzió, azonban a felugró figyelmeztetés ("Replace with specific version") segít megtalálni a legutolsó változatot. 
+A változtatás természetesen már tükröződik a [i]Project Structure[/i] részben. 
+A változtatások után szükséges a Gradle file-ok szinkronizálása, de ezt a rendszer fel is ajánlja.
+
+[url=https://medium.com/@JakobUlbrich/building-a-settings-screen-for-android-part-1-5959aa49337c#.1i0obt223]Jakob Ulbrich[/url] leírása alapján.
+
