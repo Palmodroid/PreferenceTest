@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/prefs_first">
+
+        <android.support.v7.preference.Preference
+            android:key="@string/first_pref_key"
+            android:title="@string/first_pref_title"
+            android:summary="@string/first_pref_summary" />
+
+        <android.support.v7.preference.CheckBoxPreference
+            android:key="@string/first_check_box_key"
+            android:title="@string/first_check_box_title"
+            android:summary="@string/first_check_box_summary"
+            android:defaultValue="@bool/first_check_box_default" />
+
+        <android.support.v7.preference.EditTextPreference
+            android:key="@string/first_edit_text_key"
+            android:title="@string/first_edit_text_title"
+            android:summary="@string/first_edit_text_summary"
+            android:dialogTitle="@string/first_edit_text_dialog_title"
+            android:dialogMessage="@string/first_edit_text_dialog_message"
+            android:defaultValue="@string/first_edit_text_default" />
+        <!--android:dialogLayout="@layout/pref_dialog_edittext_fix"-->
+
+        <android.support.v7.preference.ListPreference
+            android:key="@string/first_list_key"
+            android:title="@string/first_list_title"
+            android:summary="@string/first_list_summary"
+            android:entries="@array/trilean_list_entries"
+            android:entryValues="@array/trilean_list_values"
+            android:defaultValue="@string/first_list_default"/>
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/prefs_second">
+
+        <android.support.v7.preference.CheckBoxPreference
+            android:key="@string/second_check_box_key"
+            android:title="@string/second_check_box_title"
+            android:summary="@string/second_check_box_summary"
+            android:defaultValue="@bool/second_check_box_default" />
+
+        <android.support.v7.preference.EditTextPreference
+            android:key="@string/second_edit_text_key"
+            android:title="@string/second_edit_text_title"
+            android:summary="@string/second_edit_text_summary"
+            android:dialogTitle="@string/second_edit_text_dialog_title"
+            android:dialogMessage="@string/second_edit_text_dialog_message"
+            android:defaultValue="@string/second_edit_text_default"
+            android:digits="0123456789abcdefABCDEF"
+            android:maxLength="8"
+            android:dependency="@string/second_check_box_key"/>
+
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>

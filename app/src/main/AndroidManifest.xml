@@ -8,6 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--android:theme="@android:style/Theme.DeviceDefault"-->
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -17,6 +19,19 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".preferenceclassic.PrefsActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.DeviceDefault">
+        </activity>
+
+        <activity
+            android:name=".preferencematerial.PrefsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+
     </application>
 
 </manifest>

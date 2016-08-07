@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="first_check_box_default">true</bool>
+    <string name="first_edit_text_default">Some text to edit</string>
+    <string name="first_list_default">A</string>
+
+    <bool name="second_check_box_default">false</bool>
+    <string name="second_edit_text_default">12345678</string>
+
+</resources>

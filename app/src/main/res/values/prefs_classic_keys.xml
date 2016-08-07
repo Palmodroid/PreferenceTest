@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="first_pref_key" translatable="false"
+        >FIRST_PREF_KEY</string>
+    <string name="first_check_box_key" translatable="false"
+        >FIRST_CHECK_BOX_KEY</string>
+    <string name="first_edit_text_key" translatable="false"
+        >FIRST_EDIT_TEXT_KEY</string>
+    <string name="first_list_key" translatable="false"
+        >FIRST_LIST_KEY</string>
+
+    <string name="second_check_box_key" translatable="false"
+        >SECOND_CHECK_BOX_KEY</string>
+    <string name="second_edit_text_key" translatable="false"
+        >SECOND_EDIT_TEXT_KEY</string>
+</resources>

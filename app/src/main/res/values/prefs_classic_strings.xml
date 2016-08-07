@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="trilean_list_entries">
+        <item>Automatic</item>
+        <item>Enabled</item>
+        <item>Disabled</item>
+    </string-array>
+
+    <string-array name="trilean_list_values">
+        <item>A</item>
+        <item>E</item>
+        <item>D</item>
+    </string-array>
+
+    <string name="prefs_first">First</string>
+
+    <string name="first_pref_title">Preference</string>
+    <string name="first_pref_summary">Touch to do something!</string>
+
+    <string name="first_check_box_title">Check-box</string>
+    <string name="first_check_box_summary">Touch to toggle boolean value!</string>
+
+    <string name="first_edit_text_title">Edit-text</string>
+    <string name="first_edit_text_summary">Select to write some edit text</string>
+    <string name="first_edit_text_dialog_title">Text to edit</string>
+    <string name="first_edit_text_dialog_message">Enter some text!</string>
+
+    <string name="first_list_title">List</string>
+    <string name="first_list_summary">Touch to select a trilean value!</string>
+
+    <string name="prefs_second">Second</string>
+
+    <string name="second_check_box_title">Check-box</string>
+    <string name="second_check_box_summary">Touch to toggle hex preference!</string>
+
+    <string name="second_edit_text_title">Hex</string>
+    <string name="second_edit_text_summary">Select to write some hex value!</string>
+    <string name="second_edit_text_dialog_title">Hexadecimal value</string>
+    <string name="second_edit_text_dialog_message">Enter hexadecimal numbers!</string>
+
+</resources>
