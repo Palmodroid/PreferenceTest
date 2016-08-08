@@ -28,6 +28,7 @@ public class PrefsFragment extends PreferenceFragmentCompat
                         return true;
                         }
                     });
+
         }
 
     @Override

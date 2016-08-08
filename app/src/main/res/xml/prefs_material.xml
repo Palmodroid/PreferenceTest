@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.preference.PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.preference.PreferenceCategory
         android:title="@string/prefs_first">
@@ -22,8 +23,8 @@
             android:summary="@string/first_edit_text_summary"
             android:dialogTitle="@string/first_edit_text_dialog_title"
             android:dialogMessage="@string/first_edit_text_dialog_message"
-            android:defaultValue="@string/first_edit_text_default" />
-        <!--android:dialogLayout="@layout/pref_dialog_edittext_fix"-->
+            android:defaultValue="@string/first_edit_text_default"
+            android:dialogLayout="@layout/pref_dialog_edittext_fix" />
 
         <android.support.v7.preference.ListPreference
             android:key="@string/first_list_key"
@@ -53,7 +54,30 @@
             android:defaultValue="@string/second_edit_text_default"
             android:digits="0123456789abcdefABCDEF"
             android:maxLength="8"
-            android:dependency="@string/second_check_box_key"/>
+            android:dependency="@string/second_check_box_key"
+            android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/prefs_second">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="@string/first_check_box_key"
+            android:title="@string/first_check_box_title"
+            android:summaryOff="Summary OFF"
+            android:summaryOn="Summary ON"
+            android:defaultValue="@bool/first_check_box_default" />
+
+        <android.support.v14.preference.SwitchPreference
+            android:key="@string/first_check_box_key"
+            android:title="@string/first_check_box_title"
+            android:summary="@string/first_check_box_summary"
+            android:summaryOff="Summary OFF"
+            android:summaryOn="Summary ON"
+            android:switchTextOff="DOWN"
+            android:switchTextOn="UP"
+            android:defaultValue="@bool/first_check_box_default" />
 
     </android.support.v7.preference.PreferenceCategory>
 

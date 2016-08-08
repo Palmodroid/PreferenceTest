@@ -10,15 +10,15 @@
 
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
 
-        <!--item name="alertDialogTheme">@style/AppAlertDialog</item-->
+        <item name="alertDialogTheme">@style/AppAlertDialog</item>
 
     </style>
 
         <style name="Preference_TextAppearanceMaterialBody2">
-            <item name="android:textSize">40sp</item>
-            <item name="android:fontFamily">sans-serif</item>
+            <item name="android:textSize">14sp</item>
+            <item name="android:fontFamily">sans-serif-medium</item>
             <item name="android:textColor">?android:attr/textColorPrimary</item>
-            <item name="android:textStyle">normal</item>
+            <item name="android:textStyle">bold</item>
         </style>
 
     <style name="AppTheme.NoActionBar">
@@ -26,16 +26,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
-    <style name="AppAlertDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+    <style name="AppAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!-- To tint the buttons -->
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppAlertDialogContent" parent="Theme.AppCompat.DayNight">
+    <style name="AppAlertDialogContent" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!-- To tint EditText and TimePicker -->
         <item name="colorAccent">@color/colorAccent</item>
     </style>
