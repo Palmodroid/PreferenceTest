@@ -1,7 +1,11 @@
 package digitalgarden.preferencetest.preferenceclassic;
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.preference.PreferenceActivity;
+import android.view.View;
+
+import java.util.List;
+
+import digitalgarden.preferencetest.R;
 
 /**
  * PreferenceFragment is managed by PrefsActivity (which is a standard Activity).
@@ -33,7 +37,7 @@ import android.os.Bundle;
  * PrefsActivity only starts PrefsFragment
  * All preferences are managed by PrefsFragment
  */
-public class PrefsActivity extends Activity
+public class PrefsActivity extends PreferenceActivity
     {
     private static String PREFS_FRAGMENT_TAG = "digitalgarden.preferencetest.preferenceclass";
 
@@ -41,7 +45,7 @@ public class PrefsActivity extends Activity
      * This is the only method needed by PrefsActivity.
      * It only finds (or creates if missing) fragment and set it as root view
      * @param savedInstanceState savedInstanceState - not used
-     */
+     *
     @Override
     public void onCreate( Bundle savedInstanceState )
         {
@@ -71,4 +75,27 @@ public class PrefsActivity extends Activity
                 .replace( android.R.id.content, prefsFragment, PREFS_FRAGMENT_TAG )
                 .commit();
         }
+        */
+
+
+    @Override
+    public void onBuildHeaders(List<PreferenceActivity.Header> target)
+        {
+        loadHeadersFromResource(R.xml.prefs_classic_header, target);
+        }
+
+    protected boolean isValidFragment(String fragmentName) {
+    return true;
+    }
+
+    public boolean onIsMultiPane() {
+    /*boolean preferMultiPane = getResources().getBoolean(
+            com.android.internal.R.bool.preferences_prefer_dual_pane);
+    return preferMultiPane;*/
+
+    View view = findViewById(android.R.id.content);
+
+    //return (view.getHeight() > view.getWidth());
+     return true;
+    }
     }

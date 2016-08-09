@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:fragment="digitalgarden.preferencetest.preferenceclassic.PrefsFragment"
+        android:title="Header One"
+        android:summary="Summary of header one" >
+        <extra android:name="KEY" android:value="ONE" />
+    </header>
+    <header
+        android:fragment="digitalgarden.preferencetest.preferenceclassic.PrefsFragment"
+        android:title="Header Two"
+        android:summary="Summary of header two" >
+        <!-- key/value pairs can be included as arguments for the fragment. -->
+        <extra android:name="KEY" android:value="TWO" />
+    </header>
+</preference-headers>
