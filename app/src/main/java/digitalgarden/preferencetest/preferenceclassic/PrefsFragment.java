@@ -24,32 +24,35 @@ public class PrefsFragment extends PreferenceFragment
         //Scribe.locus(Debug.PREF);
 
         Bundle args = getArguments();
-        String settings = args.getString("KEY");
-        if ("ONE".equals(settings))
+        if ( args != null )
             {
-            addPreferencesFromResource(R.xml.prefs_classic);
+            String settings = args.getString("KEY");
+            if ("ONE".equals(settings))
+                {
+                addPreferencesFromResource(R.xml.prefs_classic);
 
-            // Preference as button - only click behavior is used
-            findPreference(getString(R.string.first_pref_key)).
-                    setOnPreferenceClickListener(new Preference.OnPreferenceClickListener()
-                        {
-                        @Override
-                        public boolean onPreferenceClick(Preference preference)
+                // Preference as button - only click behavior is used
+                findPreference(getString(R.string.first_pref_key)).
+                        setOnPreferenceClickListener(new Preference.OnPreferenceClickListener()
                             {
-                            // getActivity() cannot be null, when button is displayed
-                            Toast.makeText(getActivity(), "Preference was touched!", Toast.LENGTH_SHORT).show();
-                            return true;
-                            }
-                        });
-            addPreferencesFromResource(R.xml.prefs_classic_two);
+                            @Override
+                            public boolean onPreferenceClick(Preference preference)
+                                {
+                                // getActivity() cannot be null, when button is displayed
+                                Toast.makeText(getActivity(), "Preference was touched!", Toast.LENGTH_SHORT).show();
+                                return true;
+                                }
+                            });
+                addPreferencesFromResource(R.xml.prefs_classic_two);
+                }
+            else if ("TWO".equals(settings))
+                {
+                addPreferencesFromResource(R.xml.prefs_classic_two);
+                }
             }
-        else if ("TWO".equals(settings))
-            {
-            addPreferencesFromResource(R.xml.prefs_classic_two);
-            }
-
+        else
         // Load preferences from resources
-        // addPreferencesFromResource(R.xml.prefs_classic);
+            addPreferencesFromResource(R.xml.prefs_classic);
         }
 
 

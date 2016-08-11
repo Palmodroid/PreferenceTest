@@ -1,9 +1,9 @@
 package digitalgarden.preferencetest.preferenceclassic;
 
+import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.view.View;
-
-import java.util.List;
+import android.preference.PreferenceManager;
 
 import digitalgarden.preferencetest.R;
 
@@ -45,16 +45,17 @@ public class PrefsActivity extends PreferenceActivity
      * This is the only method needed by PrefsActivity.
      * It only finds (or creates if missing) fragment and set it as root view
      * @param savedInstanceState savedInstanceState - not used
-     *
+     */
     @Override
     public void onCreate( Bundle savedInstanceState )
         {
         super.onCreate(savedInstanceState);
 
+        setContentView( R.layout.one_pane_layout );
         // This should be called at every starting point
         // Ignition.start(this);
         // Scribe.locus( Debug.PREF );
-
+/*
         // Preference manager should save/recreate the fragment instance
         PrefsFragment prefsFragment = (PrefsFragment)getFragmentManager()
                 .findFragmentByTag(PREFS_FRAGMENT_TAG);
@@ -74,15 +75,15 @@ public class PrefsActivity extends PreferenceActivity
         getFragmentManager().beginTransaction()
                 .replace( android.R.id.content, prefsFragment, PREFS_FRAGMENT_TAG )
                 .commit();
+                */
         }
-        */
 
 
-    @Override
+/*    @Override
     public void onBuildHeaders(List<PreferenceActivity.Header> target)
         {
         loadHeadersFromResource(R.xml.prefs_classic_header, target);
-        }
+        }*/
 
     protected boolean isValidFragment(String fragmentName) {
     return true;
@@ -93,9 +94,10 @@ public class PrefsActivity extends PreferenceActivity
             com.android.internal.R.bool.preferences_prefer_dual_pane);
     return preferMultiPane;*/
 
-    View view = findViewById(android.R.id.content);
+    SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences( this );
 
-    //return (view.getHeight() > view.getWidth());
-     return true;
+    boolean check = sharedPrefs.getBoolean( "FIRST_CHECK_BOX_KEY", false);
+
+    return check;
     }
     }

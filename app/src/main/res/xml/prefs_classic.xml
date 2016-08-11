@@ -36,6 +36,16 @@
                 android:summary="@string/first_check_box_summary"
                 android:defaultValue="@bool/first_check_box_default" />
 
+			<digitalgarden.preferencetest.preferenceclassic.ClickPreference
+				android:key="CLICK"
+				android:title="Click widget"
+				android:summary="Click widget summary"/>
+
+			<digitalgarden.preferencetest.preferenceclassic.NumericPreference
+				android:key="NUMERIC"
+				android:title="Numeric widget"
+				android:summary="Numeric widget summary"/>
+
         </PreferenceScreen>
 
 		<EditTextPreference
